@@ -67,3 +67,32 @@ function clearCheckboxes() {
     document.getElementById('category').value = '';
     document.getElementById('city').value = '';
 }
+
+// Load specific fundraiser details on the fundraiser page
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.pathname.includes("fundraiser.html")) {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+
+        fetch(`/fundraiser/${id}`)
+            .then(response => response.json())
+            .then(fundraiser => {
+                const fundraiserDetails = document.getElementById('fundraiser-details');
+                fundraiserDetails.innerHTML = `
+                    <h2>${fundraiser.CAPTION}</h2>
+                    <p><strong>Organizer:</strong> ${fundraiser.ORGANIZER}</p>
+                    <p><strong>Target Funding:</strong> ${fundraiser.TARGET_FUNDING}</p>
+                    <p><strong>Current Funding:</strong> ${fundraiser.CURRENT_FUNDING}</p>
+                    <p><strong>City:</strong> ${fundraiser.CITY}</p>
+                    <p><strong>Category:</strong> ${fundraiser.CATEGORY_NAME}</p>
+                    <button onclick="donate()">Donate</button>
+                `;
+            })
+            .catch(err => console.error('Error fetching fundraiser details:', err));
+    }
+});
+
+// Simulate the donate button
+function donate() {
+    alert('This feature is under construction.');
+}
