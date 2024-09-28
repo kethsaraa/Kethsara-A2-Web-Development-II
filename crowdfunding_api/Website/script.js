@@ -62,12 +62,6 @@ document.getElementById('searchForm')?.addEventListener('submit', function(event
         .catch(err => console.error('Error searching fundraisers:', err));
 });
 
-// Clear search form
-function clearCheckboxes() {
-    document.getElementById('category').value = '';
-    document.getElementById('city').value = '';
-}
-
 // Load specific fundraiser details on the fundraiser page
 document.addEventListener("DOMContentLoaded", function() {
     if (window.location.pathname.includes("fundraiser.html")) {
@@ -91,6 +85,12 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(err => console.error('Error fetching fundraiser details:', err));
     }
 });
+
+// Clear search form
+function clearCheckboxes() {
+    document.getElementById('category').value = '';
+    document.getElementById('city').value = '';
+}
 
 // Simulate the donate button
 function donate() {
