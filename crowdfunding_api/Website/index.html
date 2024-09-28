@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non-Profit Home</title>
+    <title>Non-Profit Organization</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Our Non-Profit</h1>
-    <div id="fundraiser-list"></div>
+    <header>
+        <h1>Welcome to Our Non-Profit</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Fundraisers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <p>Inspiring stories about the impact of donations...</p>
+        <p>Contact us at: <a href="mailto:info@nonprofit.com">info@nonprofit.com</a></p>
+    </section>
+
+    <section id="fundraisers">
+        <h2>Active Fundraisers</h2>
+        <div id="fundraiser-list"></div> <!-- Fundraisers will loaded here -->
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
