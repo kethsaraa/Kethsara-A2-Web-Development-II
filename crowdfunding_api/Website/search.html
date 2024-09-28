@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Fundraisers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Search Fundraisers</h1>
+    <form id="searchForm">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category">
+        <br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <br>
+        <button type="submit">Search</button>
+        <button type="button" onclick="clearCheckboxes()">Clear</button>
+    </form>
+    <div id="searchResults"></div>
+    <script src="script.js"></script>
+</body>
+</html>
