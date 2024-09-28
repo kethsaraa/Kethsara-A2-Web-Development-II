@@ -7,18 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Search Fundraisers</h1>
-    <form id="searchForm">
-        <label for="category">Category:</label>
-        <input type="text" id="category" name="category">
-        <br>
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city">
-        <br>
-        <button type="submit">Search</button>
-        <button type="button" onclick="clearCheckboxes()">Clear</button>
-    </form>
-    <div id="searchResults"></div>
+    <header>
+        <h1>Search Fundraisers</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Fundraisers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <form id="searchForm">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+
+            <button type="submit">Search</button>
+            <button type="button" onclick="clearCheckboxes()">Clear</button>
+        </form>
+
+        <div id="searchResults"></div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
